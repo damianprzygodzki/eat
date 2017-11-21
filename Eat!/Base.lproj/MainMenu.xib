@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="13529" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="13529"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="NSApplication">
+            <connections>
+                <outlet property="delegate" destination="Voe-Tx-rLC" id="GzC-gU-4Uq"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <customObject id="Voe-Tx-rLC" customClass="AppDelegate" customModule="Eat_" customModuleProvider="target"/>
+        <customObject id="YLy-65-1bz" customClass="NSFontManager"/>
+        <customObject id="NNF-Jr-Bqt" customClass="StatusMenuController" customModule="Eat_" customModuleProvider="target">
+            <connections>
+                <outlet property="nextMealInfo" destination="T8N-fb-OmA" id="ozP-TC-09J"/>
+                <outlet property="start" destination="FKa-S8-3Ei" id="vhw-Ow-QKp"/>
+                <outlet property="statusMenu" destination="aQh-K0-Ol8" id="Lys-uG-PKr"/>
+            </connections>
+        </customObject>
+        <menu id="aQh-K0-Ol8">
+            <items>
+                <menuItem title="I ate breakfast! " id="FKa-S8-3Ei">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                    <connections>
+                        <action selector="breakfastEaten:" target="NNF-Jr-Bqt" id="wE4-Il-9fW"/>
+                    </connections>
+                </menuItem>
+                <menuItem isSeparatorItem="YES" id="L2H-eR-rn3"/>
+                <menuItem title="Next meal at: -" id="T8N-fb-OmA">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                </menuItem>
+                <menuItem isSeparatorItem="YES" id="wpp-YV-8TO"/>
+                <menuItem title="Config" enabled="NO" id="NCO-1Z-YIt">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                </menuItem>
+                <menuItem title="Quit" id="mZV-kZ-Ya0">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                    <connections>
+                        <action selector="quitClicked:" target="NNF-Jr-Bqt" id="5uS-kK-PXW"/>
+                    </connections>
+                </menuItem>
+            </items>
+            <point key="canvasLocation" x="116.5" y="198.5"/>
+        </menu>
+    </objects>
+</document>
